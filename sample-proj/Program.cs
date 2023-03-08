@@ -4,6 +4,30 @@ using System;
       
 namespace HelloWorld
 {
+      class Animal  // Base class (parent) 
+    {
+      public virtual void animalSound() 
+      {
+        Console.WriteLine("The animal makes a sound");
+      }
+    }
+
+    class Pig : Animal  // Derived class (child) 
+    {
+      public override void animalSound() 
+      {
+        Console.WriteLine("The pig says: wee wee");
+      }
+    }
+
+    class Dog : Animal  // Derived class (child) 
+    {
+      public override void animalSound() 
+      {
+        Console.WriteLine("The dog says: bow wow");
+      }
+    }
+
   class Program
   {
     enum Level 
@@ -12,7 +36,7 @@ namespace HelloWorld
       Medium,
       High
     }
-    
+
     static void Main(string[] args)
     {
       // convert double to string
@@ -64,6 +88,10 @@ namespace HelloWorld
       Console.WriteLine(result);
       Level myVar3 = Level.Medium;
       Console.WriteLine(myVar3);
+
+      Dog myDog = new Dog();
+      myDog.animalSound();
+      
     }
   }
 }

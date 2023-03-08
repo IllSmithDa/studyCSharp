@@ -65,7 +65,7 @@
       a. inherits the class Vehicle including private members though you still cannot access them directly
 
 
-# Polymorphism and Overriding Methods
+# Polymorphism and Overriding Methods (also known as method hiding)
 
   1. Polymorphism means "many forms", and it occurs when we have many classes
      that are related to each other by inheritance
@@ -73,7 +73,7 @@
     e.g
     class Animal  // Base class (parent) 
     {
-      public void animalSound() 
+      public virtual void animalSound() 
       {
         Console.WriteLine("The animal makes a sound");
       }
@@ -81,7 +81,7 @@
 
     class Pig : Animal  // Derived class (child) 
     {
-      public void animalSound() 
+      public override void animalSound() 
       {
         Console.WriteLine("The pig says: wee wee");
       }
@@ -89,7 +89,7 @@
 
     class Dog : Animal  // Derived class (child) 
     {
-      public void animalSound() 
+      public override void animalSound() 
       {
         Console.WriteLine("The dog says: bow wow");
       }
@@ -98,6 +98,12 @@
       a. Both 'Dog' and 'Pig' classes are inheriting from 'Animal' class
 
       b. Note that we are allowed to override the parent class using the child class's version of that method or variable
+
+      b. Method hiding because we are hiding the parent version of the mehod. It is also known as method shadowing
+
+      c. you can access base method by using 'base.animalSound()' in the scope of any of the child classes
+
+      d. Should use Override and virtual keywords to explicit state intent to override this function
 
   2. With method overloading, multiple methods can have the same name with
      different parameters. It will match the parameters and call the matching
@@ -123,6 +129,34 @@
     }
 
       a. Two different version of the same method 'PlusMethod()'
+
+# Virtual and Override
+
+  1. In C#, a virtual method is a method that can be overridden in a derived
+     class. When a method is declared as virtual in a base class, it allows a
+     derived class to provide its own implementation of the method.
+  
+    e.g 
+    public class Animal
+    {
+      public virtual void MakeSound()
+      {
+        Console.WriteLine("The animal makes a sound");
+      } 
+    }
+  
+  2. In the derived class, the method can be overridden by using the "override"
+     keyword in the method declaration.
+  
+    e.g
+    public class Cat : Animal
+    {
+        public override void MakeSound()
+        {
+            Console.WriteLine("The cat meows");
+        }
+    }
+
 
 # Access Modifiers in Classes
 
@@ -176,7 +210,31 @@
     myPig.animalSound();
 
       a. Pig class fills the method body while the interface only declares them
+# static keyword
 
+  1. To create a static member(class, variable, methods, constructor), precede
+     its declaration with the keyword static. When a member is declared static,
+     it can be accessed with the name of its class directly.
+  
+  2. Static classes are sealed and therefore cannot be inherited. They cannot
+     inherit from any class except Object. 
+  
+    e.g
+    using System;
+    static class Tutorial {
+        // Static data members of Tutorial
+        public static string Topic = "Static class";
+    }
+    public class GFG {
+    
+        // Main Method
+        static public void Main()
+        {
+        
+            // Accessing the static data members of Tutorial
+            Console.WriteLine("Topic name is : {0} ", Tutorial.Topic);
+        }
+    }
 # Enums 
 
   1. An enum is a special "class" that represents a group of constants (unchangeable/read-only variables).
