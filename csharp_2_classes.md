@@ -210,7 +210,8 @@
     myPig.animalSound();
 
       a. Pig class fills the method body while the interface only declares them
-# static keyword
+    
+# 'static' keyword
 
   1. To create a static member(class, variable, methods, constructor), precede
      its declaration with the keyword static. When a member is declared static,
@@ -235,6 +236,7 @@
             Console.WriteLine("Topic name is : {0} ", Tutorial.Topic);
         }
     }
+
 # Enums 
 
   1. An enum is a special "class" that represents a group of constants (unchangeable/read-only variables).
