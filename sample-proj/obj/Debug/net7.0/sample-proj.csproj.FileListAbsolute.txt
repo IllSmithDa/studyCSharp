@@ -1,0 +1,15 @@
+C:\Users\sams4\Documents\Projects\studyCSharp\sample-proj\bin\Debug\net7.0\sample-proj.exe
+C:\Users\sams4\Documents\Projects\studyCSharp\sample-proj\bin\Debug\net7.0\sample-proj.deps.json
+C:\Users\sams4\Documents\Projects\studyCSharp\sample-proj\bin\Debug\net7.0\sample-proj.runtimeconfig.json
+C:\Users\sams4\Documents\Projects\studyCSharp\sample-proj\bin\Debug\net7.0\sample-proj.dll
+C:\Users\sams4\Documents\Projects\studyCSharp\sample-proj\bin\Debug\net7.0\sample-proj.pdb
+C:\Users\sams4\Documents\Projects\studyCSharp\sample-proj\obj\Debug\net7.0\sample-proj.csproj.AssemblyReference.cache
+C:\Users\sams4\Documents\Projects\studyCSharp\sample-proj\obj\Debug\net7.0\sample-proj.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sams4\Documents\Projects\studyCSharp\sample-proj\obj\Debug\net7.0\sample-proj.AssemblyInfoInputs.cache
+C:\Users\sams4\Documents\Projects\studyCSharp\sample-proj\obj\Debug\net7.0\sample-proj.AssemblyInfo.cs
+C:\Users\sams4\Documents\Projects\studyCSharp\sample-proj\obj\Debug\net7.0\sample-proj.csproj.CoreCompileInputs.cache
+C:\Users\sams4\Documents\Projects\studyCSharp\sample-proj\obj\Debug\net7.0\sample-proj.dll
+C:\Users\sams4\Documents\Projects\studyCSharp\sample-proj\obj\Debug\net7.0\refint\sample-proj.dll
+C:\Users\sams4\Documents\Projects\studyCSharp\sample-proj\obj\Debug\net7.0\sample-proj.pdb
+C:\Users\sams4\Documents\Projects\studyCSharp\sample-proj\obj\Debug\net7.0\sample-proj.genruntimeconfig.cache
+C:\Users\sams4\Documents\Projects\studyCSharp\sample-proj\obj\Debug\net7.0\ref\sample-proj.dll
