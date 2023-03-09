@@ -237,6 +237,85 @@
         }
     }
 
+# partial classes
+
+  1. classes can be defined across multiple files using the 'partial' keyword
+
+    e.g
+    public partial class Employee
+    {
+        public void DoWork()
+        {
+        }
+    }
+
+    public partial class Employee
+    {
+        public void GoToLunch()
+        {
+        }
+    }
+
+  2. Nested types can be partial, even if the type they are nested within is not
+     partial itself.
+  
+    e.g
+    class Container
+    {
+        partial class Nested
+        {
+            void Test() { }
+        }
+
+        partial class Nested
+        {
+            void Test2() { }
+        }
+    }
+
+  3. All partial-type definitions meant to be parts of the same type must be
+     modified with partial. For example, the following class declarations
+     generate an error
+  
+  4. All partial-type definitions meant to be parts of the same type must be
+     defined in the same assembly and the same module (.exe or .dll file).
+     Partial definitions cannot span multiple modules.
+  
+    e.g
+    public partial class Coords
+    {
+        private int x;
+        private int y;
+
+        public Coords(int x, int y)
+        {
+            this.x = x;
+            this.y = y;
+        }
+    }
+
+    public partial class Coords
+    {
+        public void PrintCoords()
+        {
+            Console.WriteLine("Coords: {0},{1}", x, y);
+        }
+    }
+
+    class TestCoords
+    {
+        static void Main()
+        {
+            Coords myCoords = new Coords(10, 15);
+            myCoords.PrintCoords();
+
+            // Keep the console window open in debug mode.
+            Console.WriteLine("Press any key to exit.");
+            Console.ReadKey();
+        }
+    }
+    // Output: Coords: 10,15
+
 # Enums 
 
   1. An enum is a special "class" that represents a group of constants (unchangeable/read-only variables).
